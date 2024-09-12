@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+
+
+  <style type="text/css">
+    body {
+      background-color: #1e2860;
+      font-family: 'tahoma';
+    }
+
+    .btn {
+      border-radius: 30px;
+    }
+
+    .signup-form {
+      width: 500px;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+
+    .signup-form h2 {
+      color: #333;
+      margin: 0 0 30px 0;
+      display: inline-block;
+      padding: 0 30px 10px 0;
+      border-bottom: 3px solid #ffffff;
+    }
+
+    .signup-form form {
+      color: #999;
+      border-radius: 3px;
+      margin-bottom: 15px;
+      background: #ffffff;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+    }
+
+
+    .btn {
+      font-size: 16px;
+      font-weight: bold;
+      background: #161df0;
+      margin-top: 20px;
+      min-width: 140px;
+    }
+
+    .btn:hover {
+      background: #4293fe;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "library/navbarstudent.html" %}
+  <br><br>
+  <h3 align="center" style=" margin-bottom: 0px;" class='alert alert-info'>Welcome to our library </h3>
+  <br><br><br><br><br>
+  <div>
+    <h1 align="center">Hello {{user.first_name}} !</h1>
+    <p align="center"></p>
+    <hr>
+    <div class="options" style="text-align:center">
+      <a href="viewissuedbookbystudent" class="btn btn-primary btn-lg " role="button">View issued book to you</a>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

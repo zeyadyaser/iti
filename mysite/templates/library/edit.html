@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Sumit</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+
+	<style type="text/css">
+		body {
+			background-color: #1e2860;
+			font-family: 'tahoma';
+		}
+
+		.btn {
+			border-radius: 30px;
+		}
+
+		.signup-form {
+			width: 500px;
+			margin: 0 auto;
+			padding: 30px 0;
+		}
+
+		.signup-form h2 {
+			color: #333;
+			margin: 0 0 30px 0;
+			display: inline-block;
+			padding: 0 30px 10px 0;
+			border-bottom: 3px solid #ffffff;
+		}
+
+		.signup-form form {
+			color: #999;
+			border-radius: 3px;
+			margin-bottom: 15px;
+			background: #ffffff;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+			padding: 30px;
+		}
+
+
+		.btn {
+			font-size: 16px;
+			font-weight: bold;
+			background: #161df0;
+			margin-top: 20px;
+			min-width: 140px;
+		}
+
+		.btn:hover {
+			background: #4293fe;
+		}
+	</style>
+
+
+
+
+
+</head>
+
+<body style="background-color:darkcyan;">
+	{% include "library/navbaradmin.html" %}
+	<br>
+	<br>
+
+	<div class="signup-form">
+		<form method="post" class="form-horizontal">
+
+			<h2 align="center">Edit book</h2>
+
+			{% csrf_token %}
+
+			{% for field in form %}
+			<div class="form-group" align="center">
+				<label>{{ field.label_tag }}</label>
+				<div>
+					{{ field }}
+				</div>
+			</div>
+			{% endfor %}
+
+
+			<div class="form-group">
+				<div align="center">
+					<button type="submit" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+
+</html>
